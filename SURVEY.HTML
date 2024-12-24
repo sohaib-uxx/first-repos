@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Survey</title>
+    <style>
+        body, h1, form, fieldset, legend, label, input, textarea {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f7;
+            padding: 20px;
+        }
+
+      
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        fieldset {
+            border: 2px solid #2c3e50;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ecf0f1;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        label {
+            font-size: 1.1em;
+            color: #34495e;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .survey-question {
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            background-color: #2c3e50;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #34495e;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            form {
+                grid-template-columns: 1fr;
+            }
+
+            .submit-btn {
+                font-size: 1em;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Government Survey on Public Services</h1>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Survey Questions</legend>
+
+                <div class="survey-question">
+                    <label>How satisfied are you with government services?</label><br>
+                    <input type="radio" id="very_satisfied" name="satisfaction" value="Very Satisfied">
+                    <label for="very_satisfied">Very Satisfied</label><br>
+                    <input type="radio" id="satisfied" name="satisfaction" value="Satisfied">
+                    <label for="satisfied">Satisfied</label><br>
+                    <input type="radio" id="neutral" name="satisfaction" value="Neutral">
+                    <label for="neutral">Neutral</label><br>
+                    <input type="radio" id="dissatisfied" name="satisfaction" value="Dissatisfied">
+                    <label for="dissatisfied">Dissatisfied</label><br>
+                    <input type="radio" id="very_dissatisfied" name="satisfaction" value="Very Dissatisfied">
+                    <label for="very_dissatisfied">Very Dissatisfied</label>
+                </div>
+
+                <div class="survey-question">
+                    <label for="improvements">What improvements would you like to see in government services?</label><br>
+                    <textarea id="improvements" name="improvements" rows="4" required></textarea>
+                </div>
+
+                <div class="survey-question">
+                    <label for="age-group">Which age group do you belong to?</label><br>
+                    <select id="age-group" name="age-group" required>
+                        <option value="Under 18">Under 18</option>
+                        <option value="18-24">18-24</option>
+                        <option value="25-34">25-34</option>
+                        <option value="35-44">35-44</option>
+                        <option value="45-60">45-60</option>
+                        <option value="Above 60">Above 60</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <div class="submit-btn-container">
+                <button type="submit" class="submit-btn">Submit Survey</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
